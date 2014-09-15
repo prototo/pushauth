@@ -1,0 +1,26 @@
+<h1>pushauth</h1>
+
+{% with messages = get_flashed_messages() %}
+	{% if messages | length %}
+		<hr />
+		<h2>messages</h2>
+		{% for message in messages %}
+			<p>{{ message }}</p>
+		{% endfor %}
+	{% endif %}
+{% endwith %}
+
+<hr />
+<h2>login</h2>
+<form action="login" method="POST">
+	<input type="text" name="username" placeholder="username" />
+	<input type="submit" />
+</form>
+
+<hr />
+<h2>create</h2>
+<form action="create" method="POST">
+	<input type="text" name="username" placeholder="username" />
+	<input type="text" name="key" placeholder="key" value="v17IwoQvMqXy5fTJa8G2jMxQeyQjZMP83UujASn5ktYqW" />
+	<input type="submit" />
+</form>
